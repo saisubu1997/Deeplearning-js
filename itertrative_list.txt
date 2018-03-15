@@ -1,0 +1,22 @@
+activatedrec = Costing_Reference[Section_Name == "Activated Carbon Filter (FRP/MSEP)"] sort by Display_Order asc;
+displayOrderList = List();
+componentList = List();
+unitList = List();
+for each  rec in activatedrec
+{
+	displayOrderList.add(rec.Display_Order);
+	componentList.add(rec.Component_Name);
+	unitList.add(rec.Unit);
+}
+count = 0;
+for each  subRec in section_Activated_Carbon_Filter_FRP_MSEP
+{
+	if(displayOrderList.size() > count)
+	{
+		subRec.serial_no=displayOrderList.get(count);
+		subRec.Component=componentList.get(count);
+		subRec.Unit=unitList.get(count);
+		//		rec.removeElement(subRec.Equipment);
+		count = count + 1;
+	}
+}

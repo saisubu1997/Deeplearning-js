@@ -1,0 +1,42 @@
+preTaxAmt = ifnull(row.Rate,0) * ifnull(row.Quantity,0);
+row.Cost1=ifnull(row.Gst,0) / 100 * preTaxAmt;
+row.Total1=preTaxAmt + row.Cost1;
+grand = 0;
+for each  i in section_Activated_Carbon_Filter_FRP_MSEP
+{
+	if(i.Total1 != null)
+	{
+		grand = grand + i.Total1;
+	}
+}
+input.Grand_Total = grand;
+
+
+
+preTaxAmt = ifnull(row.Rate,0) * ifnull(row.Quantity,0);
+row.Cost1=ifnull(row.Gst,0) / 100 * preTaxAmt;
+row.Total1=preTaxAmt + row.Cost1;
+grand = 0;
+for each  i in section_Activated_Carbon_Filter_FRP_MSEP
+{
+	if(i.Total1 != null)
+	{
+		grand = grand + i.Total1;
+	}
+}
+input.Grand_Total = grand;
+
+
+
+preTaxAmt = ifnull(row.Rate,0) * ifnull(row.Quantity,0);
+row.Cost1=ifnull(row.Gst,0) / 100 * preTaxAmt;
+row.Total1=preTaxAmt + row.Cost1;
+grand = 0;
+for each  i in section_Activated_Carbon_Filter_FRP_MSEP
+{
+	if(i.Total1 != null)
+	{
+		grand = grand + i.Total1;
+	}
+}
+input.Grand_Total = grand;

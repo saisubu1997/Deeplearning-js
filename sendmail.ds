@@ -1,9 +1,0 @@
-sendmail
-[
-	from :zoho.adminuserid
-	to :"saisubu1997@gmail.com"
-	subject :"This is sample record summary!"
-	message :"just a sample message!<div>&nbsp;from sample data!</div>"
-	content type :HTML
-	Attachments :template:drive_sample as PDF
-]
